@@ -1,123 +1,1137 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>Ristorante Con Fusion</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Ristorante Con Fusion: About Us</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-social/bootstrap-social.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link href="css/styles.css" rel="stylesheet" />
   </head>
-
   <body>
-    <header>
-      <div>
-        <div>
-          <div>
-            <h1>Ristorante con Fusion</h1>
-            <p>
-              We take inspiration from the World's best cuisines, and create a
-              unique fusion experience. Our lipsmacking creations will tickle
-              your culinary senses!
+    <div class="container">
+      <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#Navbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <a class="navbar-brand mr-auto" href="#"
+            ><img src="img/logo.png" height="30" width="41"
+          /></a>
+          <div class="collapse navbar-collapse" id="Navbar">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"
+                  ><span class="fa fa-home"> </span> Home</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./aboutus.html"
+                  ><span class="fa fa-info fa-lg"></span> About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><span class="fa fa-list fa-lg"></span> Menu</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contactus.html"
+                  ><span class="fa fa-address-card fa-lg"></span> Contact</a
+                >
+              </li>
+            </ul>
+            <span class="navbar-text">
+              <a id="loginBtn"> <span class="fa fa-sign-in"></span> Login</a>
+            </span>
+          </div>
+        </div>
+      </nav>
+      <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Login</h4>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-sm-4">
+                    <label class="sr-only" for="exampleInputEmail3"
+                      >Email address</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control form-control-sm mr-1"
+                      id="exampleInputEmail3"
+                      placeholder="Enter email"
+                    />
+                  </div>
+                  <div class="form-group col-sm-4">
+                    <label class="sr-only" for="exampleInputPassword3"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control form-control-sm mr-1"
+                      id="exampleInputPassword3"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <div class="col-sm-auto">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" />
+                      <label class="form-check-label"> Remember me </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-sm ml-auto"
+                    data-dismiss="modal"
+                  >
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn btn-primary btn-sm ml-1">
+                    Sign in
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="reserveFormModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Reserve a Table</h4>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group row">
+                  <label for="number-of-guests" class="col-md-2 col-form-label"
+                    >Number of Guests</label
+                  >
+                  <div class="col-md-10">
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio1"
+                        value="1"
+                      />
+                      <label class="form-check-label" for="inlineRadio1"
+                        >1</label
+                      >
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio2"
+                        value="2"
+                      />
+                      <label class="form-check-label" for="inlineRadio2"
+                        >2</label
+                      >
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio3"
+                        value="3"
+                      />
+                      <label class="form-check-label" for="inlineRadio2"
+                        >3</label
+                      >
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio4"
+                        value="4"
+                      />
+                      <label class="form-check-label" for="inlineRadio2"
+                        >4</label
+                      >
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio5"
+                        value="5"
+                      />
+                      <label class="form-check-label" for="inlineRadio2"
+                        >5</label
+                      >
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio6"
+                        value="6"
+                      />
+                      <label class="form-check-label" for="inlineRadio2"
+                        >6</label
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="date-time" class="col-12 col-md-2 col-form-label"
+                    >Section</label
+                  >
+                  <div
+                    class="btn-group btn-group-toggle col-12 col-md-10"
+                    data-toggle="buttons"
+                  >
+                    <label class="btn btn-success active">
+                      <input
+                        type="radio"
+                        name="options"
+                        id="option1"
+                        autocomplete="off"
+                        checked
+                      />
+                      Non-Smoking
+                    </label>
+                    <label class="btn btn-danger">
+                      <input
+                        type="radio"
+                        name="options"
+                        id="option2"
+                        autocomplete="off"
+                      />
+                      Smoking
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="date-time" class="col-12 col-md-2 col-form-label"
+                    >Date and Time</label
+                  >
+                  <div class="col-6 col-md-3">
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="date"
+                      name="date"
+                      placeholder="Date"
+                    />
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <input
+                      type="time"
+                      class="form-control"
+                      id="time"
+                      name="time"
+                      placeholder="Time"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="offset-md-2 col-md-10">
+                    <button
+                      type="button"
+                      class="btn btn-secondary ml-auto"
+                      data-dismiss="modal"
+                    >
+                      Cancel
+                    </button>
+                    <button type="submit" class="btn btn-primary ml-1">
+                      Reserve
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <header class="jumbotron text-white" style="background-color: #9575cd" ;>
+        <div class="container">
+          <div class="row row-header">
+            <div class="col-12 col-sm-6">
+              <h1>Ristorante con Fusion</h1>
+              <p>
+                We take inspiration from the World's best cuisines, and create a
+                unique fusion experience. Our lipsmacking creations will tickle
+                your culinary senses!
+              </p>
+            </div>
+            <div class="col-12 col-sm align-self-center">
+              <img src="img/logo.png" class="img-fluid" />
+            </div>
+
+            <div class="col-sm-2 order-sm-last align-self-center">
+              <!--
+              <div class="container col-xs-6 col-sm-2 col-sm-push-4">
+              <a type="submit" href="#reservetable" class="btn btn-warning"
+                >Reserve Table</a
+              >
+              </div> -->
+              <!-- <a
+                role="button"
+                class="btn btn-block nav-link btn-warning"
+                data-toggle="tooltip"
+                data-html="true"
+                title="Or Call us at  <br/><strong>+852 12345678</strong>"
+                data-placement="bottom"
+                href="#reserveform"
+                >Reserve Table</a
+              > -->
+
+              <a
+                role="button"
+                class="btn btn-block nav-link btn-warning"
+                id="reserveBtn"
+                >Reserve Table</a
+              >
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div id="reserveFormModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Reserve a Table</h4>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-sm-6">
+                    <div class="form-group row">
+                      <p class="col-12 col-12 col-sm-6">Number of Guests</p>
+                      <label class="radio-inline mr-2"
+                        ><input type="radio" name="optradio" /> 1</label
+                      >
+                      <label class="radio-inline mr-2"
+                        ><input type="radio" name="optradio" /> 2</label
+                      >
+                      <label class="radio-inline mr-2"
+                        ><input type="radio" name="optradio" /> 3</label
+                      >
+                      <label class="radio-inline mr-2"
+                        ><input type="radio" name="optradio" /> 4</label
+                      >
+                      <label class="radio-inline mr-2"
+                        ><input type="radio" name="optradio" /> 5</label
+                      >
+                      <label class="radio-inline"
+                        ><input type="radio" name="optradio" /> 6</label
+                      >
+                    </div>
+
+                    <div class="form-group row">
+                      <p class="col-12 col-sm-6">Section</p>
+                      <span class="row">
+                        <button
+                          type="button"
+                          class="btn btn-success active ml-3"
+                        >
+                          Non-Smoking
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                          Smoking
+                        </button>
+                      </span>
+                    </div>
+                    <dl class="row">
+                      <label for="bookingDate" class="col-form-label col-sm-6"
+                        >Date and Time</label
+                      >
+                      <input
+                        type="date"
+                        class="form-control col-4 col-sm-3 align-self-center"
+                        id="datetime"
+                        name="date"
+                        placeholder="Choose Date"
+                      />
+                      <input
+                        type="time"
+                        class="form-control col-3 col-sm-3 my-1 align-self-center"
+                        id="datetime"
+                        name="time"
+                        placeholder="Choose Time"
+                      />
+                    </dl>
+                  </div>
+                </div>
+                <div class="form-row order-sm-first offset-sm-6">
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-sm ml-auto"
+                    data-dismiss="modal"
+                  >
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn btn-primary btn-sm ml-1">
+                    Reserve
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- carousel -->
+        <div class="row row-content">
+          <div class="col">
+            <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
+              <div
+                class="carousel-inner d-flex justify-content-center"
+                role="listbox"
+              >
+                <div class="carousel-item active">
+                  <img
+                    class="d-block img-fluid"
+                    src="./img/uthappizza.png"
+                    alt="uthappizza"
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2>
+                      Uthappizza
+                      <span class="badge badge-danger">HOT</span>
+                      <span class="badge badge-pill badge-secondary"
+                        >$4.99</span
+                      >
+                    </h2>
+                    <p class="d-none d-sm-block">
+                      A unique combination of Indian Uthappam (pancake) and
+                      Italian pizza, topped with Cerignola olives, ripe vine
+                      cherry tomatoes, Vidalia onion, Guntur chillies and
+                      Buffalo Paneer.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    class="d-block img-fluid"
+                    src="./img/buffet.png"
+                    alt="Buffet"
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2>
+                      Weekend Grand Buffet
+                      <span class="badge badge-danger">HOT</span>
+                      <span class="badge badge-pill badge-secondary"
+                        >$4.99</span
+                      >
+                    </h2>
+                    <p class="d-none d-sm-block">
+                      Featuring mouthwatering combinations with a choice of five
+                      different salads, six enticing appetizers, six main
+                      entrees and five choicest desserts. Free flowing bubbly
+                      and soft drinks. All for just $19.99 per person
+                    </p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    class="d-block img-fluid"
+                    src="img/alberto.png"
+                    alt="Alberto Somayya"
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2>
+                      Alberto Somayya
+                      <span class="badge badge-danger">HOT</span>
+                      <span class="badge badge-pill badge-secondary"
+                        >$4.99</span
+                      >
+                    </h2>
+                    <p class="d-none d-sm-block">
+                      Award winning three-star Michelin chef with wide
+                      International experience having worked closely with
+                      whos-who in the culinary world, he specializes in creating
+                      mouthwatering Indo-Italian fusion experiences.
+                    </p>
+                  </div>
+                </div>
+
+                <!--control for carousel-->
+                <ol class="carousel-indicators">
+                  <li
+                    data-target="#mycarousel"
+                    data-slide-to="0"
+                    class="active"
+                  ></li>
+                  <li
+                    data-target="#mycarousel"
+                    data-slide-to="1"
+                    class="active"
+                  ></li>
+                  <li
+                    data-target="#mycarousel"
+                    data-slide-to="2"
+                    class="active"
+                  ></li>
+                </ol>
+                <a
+                  class="carousel-control-prev"
+                  href="#mycarousel"
+                  role="button"
+                  data-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a
+                  class="carousel-control-next"
+                  href="#mycarousel"
+                  role="button"
+                  data-slide="next"
+                >
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+
+                <div class="btn-group" id="carouselButton">
+                  <button class="btn btn-danger btn-sm" id="carouselButton">
+                    <span id="carousel-button-icon" class="fa fa-pause"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6">
+          <div class="card">
+            <h3 class="card-header bg-primary text-white">Facts At a Glance</h3>
+            <div class="card-body">
+              <dl class="row">
+                <dt class="col-6">Started</dt>
+                <dd class="col-6">3 Feb. 2013</dd>
+                <dt class="col-6">Major Stake Holder</dt>
+                <dd class="col-6">HK Fine Foods Inc.</dd>
+                <dt class="col-6">Last Year's Turnover</dt>
+                <dd class="col-6">$1,250,375</dd>
+                <dt class="col-6">Employees</dt>
+                <dd class="col-6">40</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mt-5">
+          <div class="card card-body bg-light">
+            <blockquote class="blockquote">
+              <p class="mb-0">
+                You better cut the pizza in four pieces because I'm not hungry
+                enough to eat six.
+              </p>
+              <br />
+              <footer class="blockquote-footer">
+                Yogi Berra,
+                <cite title="Source Title"
+                  >The Wit and Wisdom of Yogi Berra, P. Pepe, Diversion Books,
+                  2014</cite
+                >
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+      <br /><br />
+      <div class="row row-content">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="home-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#peter"
+              type="button"
+              role="tab"
+              aria-controls="home"
+              aria-selected="true"
+            >
+              Peter Pan, CEO
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="profile-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#danny"
+              type="button"
+              role="tab"
+              aria-controls="profile"
+              aria-selected="false"
+            >
+              Danny Witherspoon, CFO
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="profile-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#agumbe"
+              type="button"
+              role="tab"
+              aria-controls="profile"
+              aria-selected="false"
+            >
+              Agumbe Tang, CTO
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="profile-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#alberto"
+              type="button"
+              role="tab"
+              aria-controls="profile"
+              aria-selected="false"
+            >
+              Alberto Somayya, Exec. Chef
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="peter"
+            role="tabpanel"
+            aria-labelledby="home-tab"
+          >
+            <p class="d-none d-sm-block">
+              Our CEO, Peter, credits his hardworking East Asian immigrant
+              parents who undertook the arduous journey to the shores of America
+              with the intention of giving their children the best future. His
+              mother's wizardy in the kitchen whipping up the tastiest dishes
+              with whatever is available inexpensively at the supermarket, was
+              his first inspiration to create the fusion cuisines for which
+              <i>The Frying Pan</i> became well known. He brings his zeal for
+              fusion cuisines to this restaurant, pioneering cross-cultural
+              culinary connections.
             </p>
           </div>
-          <div></div>
+          <div
+            class="tab-pane fade"
+            id="danny"
+            role="tabpanel"
+            aria-labelledby="profile-tab"
+          >
+            <p class="d-none d-sm-block">
+              Our CFO, Danny, as he is affectionately referred to by his
+              colleagues, comes from a long established family tradition in
+              farming and produce. His experiences growing up on a farm in the
+              Australian outback gave him great appreciation for varieties of
+              food sources. As he puts it in his own words,
+              <i
+                >Everything that runs, wins, and everything that stays, pays!</i
+              >
+            </p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="agumbe"
+            role="tabpanel"
+            aria-labelledby="contact-tab"
+          >
+            <p class="d-none d-sm-block">
+              Blessed with the most discerning gustatory sense, Agumbe, our CTO,
+              personally ensures that every dish that we serve meets his
+              exacting tastes. Our chefs dread the tongue lashing that ensues if
+              their dish does not meet his exacting standards. He lives by his
+              motto,
+              <i>You click only if you survive my lick.</i>
+            </p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="alberto"
+            role="tabpanel"
+            aria-labelledby="contact-tab"
+          >
+            <p class="d-none d-sm-block">
+              Award winning three-star Michelin chef with wide International
+              experience having worked closely with whos-who in the culinary
+              world, he specializes in creating mouthwatering Indo-Italian
+              fusion experiences. He says,
+              <i
+                >Put together the cuisines from the two craziest cultures, and
+                you get a winning hit! Amma Mia!</i
+              >
+            </p>
+          </div>
         </div>
       </div>
-    </header>
-
-    <div>
-      <div>
-        <div>
-          <h3>Our Lipsmacking Culinary Creations</h3>
-        </div>
-        <div>
-          <h2>Uthappizza</h2>
-          <p>
-            A unique combination of Indian Uthappam (pancake) and Italian pizza,
-            topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia
-            onion, Guntur chillies and Buffalo Paneer.
-          </p>
+      <br /><br />
+      <div class="row row-content">
+        <div class="col-12 col-sm-12 mt-5">
+          <h2>Facts &amp; Figures</h2>
+          <div class="table-fluidimg-fluid">
+            <table class="table table-striped">
+              <thead class="thead-dark">
+                <tr class="bg-dark text-white">
+                  <th>&nbsp;</th>
+                  <th>2013</th>
+                  <th>2014</th>
+                  <th>2015</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Employees</th>
+                  <td>15</td>
+                  <td>30</td>
+                  <td>40</td>
+                </tr>
+                <tr>
+                  <th>Guests Served</th>
+                  <td>15000</td>
+                  <td>45000</td>
+                  <td>100,000</td>
+                </tr>
+                <tr>
+                  <th>Special Events</th>
+                  <td>3</td>
+                  <td>20</td>
+                  <td>45</td>
+                </tr>
+                <tr>
+                  <th>Annual Turnover</th>
+                  <td>$251,325</td>
+                  <td>$1,250,375</td>
+                  <td>~$3,000,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
 
-      <div>
-        <div>
-          <h3>This Month's Promotions</h3>
+      <div class="row row-content">
+        <div class="col-sm-8 mt-5">
+          <form>
+            <div class="form-group row">
+              <label for="firstname" class="col-md-2 col-form-label"
+                >First Name</label
+              >
+              <div class="col-md-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstname"
+                  name="firstname"
+                  placeholder="First Name"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="lastname" class="col-md-2 col-form-label"
+                >Last Name</label
+              >
+              <div class="col-md-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastname"
+                  name="lastname"
+                  placeholder="Last Name"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="telnum" class="col-12 col-md-2 col-form-label"
+                >Contact Tel.</label
+              >
+              <div class="col-5 col-md-3">
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="areacode"
+                  name="areacode"
+                  placeholder="Area code"
+                />
+              </div>
+              <div class="col-7 col-md-7">
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="telnum"
+                  name="telnum"
+                  placeholder="Tel. number"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="emailid" class="col-md-2 col-form-label">Email</label>
+              <div class="col-md-10">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailid"
+                  name="emailid"
+                  placeholder="Email"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-md-6 offset-md-2">
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    name="approve"
+                    id="approve"
+                    value=""
+                  />
+                  <label class="form-check-label" for="approve">
+                    <strong>May we contact you?</strong>
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-3 offset-md-1">
+                <select class="form-control">
+                  <option>Tel.</option>
+                  <option>Email</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="feedback" class="col-md-2 col-form-label"
+                >Your Feedback</label
+              >
+              <div class="col-md-10">
+                <textarea
+                  class="form-control"
+                  id="feedback"
+                  name="feedback"
+                  rows="12"
+                ></textarea>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-md-2 col-md-10">
+                <button type="submit" class="btn btn-primary">
+                  Send Feedback
+                </button>
+              </div>
+            </div>
+          </form>
+          <br />
         </div>
-        <div>
-          <h2>Weekend Grand Buffet</h2>
-          <p>
-            Featuring mouthwatering combinations with a choice of five different
-            salads, six enticing appetizers, six main entrees and five choicest
-            desserts. Free flowing bubbly and soft drinks. All for just $19.99
-            per person
-          </p>
-        </div>
-      </div>
+        <!-- <div class="container my-5 overflow-auto" id="form-bottom">
+          <div class="row justify-content-start">
+            <div class="col-sm-8">
+              <div class="card align-self-center">
+                <div class="modal-header">
+                  <h4
+                    class="card-header bg-warning text-white align-items-center"
+                  >
+                    Reserve a Table
+                  </h4>
 
-      <div>
-        <div>
-          <h3>Meet our Culinary Specialists</h3>
-        </div>
-        <div>
-          <h2>Alberto Somayya</h2>
-          <h4>Executive Chef</h4>
-          <p>
-            Award winning three-star Michelin chef with wide International
-            experience having worked closely with whos-who in the culinary
-            world, he specializes in creating mouthwatering Indo-Italian fusion
-            experiences.
-          </p>
-        </div>
+                  <a name="reservetable"></a>
+                  <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                  </button>
+                </div>
+
+                <div class="card-body">
+                  <form>
+                    <div class="d-flex flex-row">
+                      <h6 class="me-3 fw-bold">Number of guests</h6>
+                      <div class="form-check form-check-inline me-3">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          id="radio-check1"
+                          value="label1"
+                        />
+                        <label for="radio-check1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline me-3">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          id="radio-check2"
+                          value="label2"
+                        />
+                        <label for="radio-check2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline me-3">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          id="radio-check3"
+                          value="label3"
+                        />
+                        <label for="radio-check3">3</label>
+                      </div>
+                      <div class="form-check form-check-inline me-3">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          id="radio-check4"
+                          value="label4"
+                        />
+                        <label for="radio-check4">4</label>
+                      </div>
+                      <div class="form-check form-check-inline me-3">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          id="radio-check5"
+                          value="label5"
+                        />
+                        <label for="radio-check5">5</label>
+                      </div>
+                      <div class="form-check form-check-inline me-3">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          id="radio-check6"
+                          value="label6"
+                        />
+                        <label for="radio-check6">6</label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-sm-8">
+                        <label class="control-label col-12 col-md-3 fw-bold"
+                          >Section</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-success active">
+                            <input
+                              type="radio"
+                              name="section"
+                              id="section-non-sm"
+                              autocomplete="off"
+                              checked
+                            />Non-smoking
+                          </label>
+                          <label class="btn btn-danger">
+                            <input
+                              type="radio"
+                              name="section"
+                              id="section-sm"
+                              autocomplete="off"
+                            />Smoking
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row mt-4">
+                      <label
+                        for="date-time"
+                        class="col-12 col-md-2 col-form-label fw-bold"
+                        >Date and Time</label
+                      >
+                      <div class="col-6 col-md-3">
+                        <input
+                          type="date"
+                          class="form-control"
+                          id="date"
+                          name="date"
+                          placeholder="Date"
+                        />
+                      </div>
+                      <div class="col-6 col-md-3">
+                        <input
+                          type="time"
+                          class="form-control"
+                          id="time"
+                          name="time"
+                          placeholder="Time"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form-group row mt-4">
+                      <div class="form-group">
+                        <div class="control-label col-sm-4">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-dismiss="modal"
+                          >
+                            <strong>Cancel</strong>
+                          </button>
+                          <button type="submit" class="btn btn-primary">
+                            Reserve
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
       </div>
     </div>
-
-    <footer>
-      <div>
-        <div>
-          <div>
+    <footer class="footer" style="background-color: #d1c4e9">
+      <div class="container">
+        <div class="row">
+          <div class="col-4 offset-1 col-sm-2">
             <h5>Links</h5>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Menu</a></li>
-              <li><a href="#">Contact</a></li>
+            <ul class="list-unstyled">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html"
+                  ><span class="fa fa-home fa-lg"></span> Home</a
+                >
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#"
+                  ><span class="fa fa-info fa-lg"></span> About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><span class="fa fa-list fa-lg"></span> Menu</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><span class="fa fa-address-card fa-lg"></span> Contact</a
+                >
+              </li>
             </ul>
           </div>
-          <div>
+          <div class="col-6 col-sm-5">
             <h5>Our Address</h5>
             <address>
               121, Clear Water Bay Road<br />
               Clear Water Bay, Kowloon<br />
               HONG KONG<br />
-              Tel.: +852 1234 5678<br />
-              Fax: +852 8765 4321<br />
-              Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
+              <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br />
+              <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br />
+              <i class="fa fa-envelope fa-lg"></i>:
+              <a href="mailto:confusion@food.net">confusion@food.net</a>
             </address>
           </div>
-          <div>
-            <div>
-              <a href="http://google.com/+">Google+</a>
-              <a href="http://www.facebook.com/profile.php?id=">Facebook</a>
-              <a href="http://www.linkedin.com/in/">LinkedIn</a>
-              <a href="http://twitter.com/">Twitter</a>
-              <a href="http://youtube.com/">YouTube</a>
-              <a href="mailto:">Mail</a>
-            </div>
+          <div class="text-center">
+            <a class="btn btn-social-icon btn-google" href="http://google.com/+"
+              ><i class="fa fa-google-plus"></i
+            ></a>
+            <a
+              class="btn btn-social-icon btn-facebook"
+              href="http://www.facebook.com/profile.php?id="
+              ><i class="fa fa-facebook"></i
+            ></a>
+            <a
+              class="btn btn-social-icon btn-linkedin"
+              href="http://www.linkedin.com/in/"
+              ><i class="fa fa-linkedin"></i
+            ></a>
+            <a
+              class="btn btn-social-icon btn-twitter"
+              href="http://twitter.com/"
+              ><i class="fa fa-twitter"></i
+            ></a>
+            <a class="btn btn-social-icon btn-google" href="http://youtube.com/"
+              ><i class="fa fa-youtube"></i
+            ></a>
+            <a class="btn btn-social-icon" href="mailto:"
+              ><i class="fa fa-envelope-o"></i
+            ></a>
           </div>
         </div>
-        <div>
-          <div>
-            <p>© Copyright 2018 Ristorante Con Fusion</p>
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <p>© Copyright 2015 Ristorante Con Fusion</p>
           </div>
         </div>
       </div>
     </footer>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#mycarousel").carousel({ interval: 2000 });
+        $("#carouselButton").click(function () {
+          if ($("#carouselButton").children("span").hasClass("fa-pause")) {
+            $("#mycarousel").carousel("pause");
+            $("#carouselButton").children("span").removeClass("fa-pause");
+            $("#carouselButton").children("span").addClass("fa-play");
+          } else if (
+            $("#carouselButton").children("span").hasClass("fa-play")
+          ) {
+            $("#mycarousel").carousel("cycle");
+            $("#carouselButton").children("span").removeClass("fa-play");
+            $("#carouselButton").children("span").addClass("fa-pause");
+          }
+        });
+      });
+    </script>
+    <script>
+      $("#reserveBtn").click(function () {
+        $("#reserveFormModal").modal("toggle");
+      });
+      $("#loginBtn").click(function () {
+        $("#loginModal").modal("toggle");
+      });
+    </script>
   </body>
 </html>
